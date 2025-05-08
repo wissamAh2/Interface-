@@ -946,24 +946,26 @@ import os
 
 # Chemin vers votre logo
 logo_path = "credit-du-maroc-seeklogo.png"
+
 # Vérification que le fichier existeg
-if os.path.exists(logo_path):
-    logo = Image.open(logo_path)
+os.path.exists(logo_path)
+logo = Image.open(logo_path)
     
     # Création d'une mise en page avec colonnes
-    col1, col2 = st.columns([4, 4])
+col1, col2 = st.columns([4, 4])
     
-    with col1:
+with col1:
         st.image(logo, width=200)  # Ajustez la largeur selon vos besoins
     
-    with col2:
+with col2:
         st.title("My Application")
     
-    st.markdown("---")
-else:
-    st.warning("Logo non trouvé au chemin spécifié")
-    st.title("My Application")
-    st.markdown("---")
+st.markdown("---")
+"""else:
+st.warning("Logo non trouvé au chemin spécifié")
+st.title("My Application")
+st.markdown("---")
+"""
 
 # Sidebar pour la navigation
 page = st.sidebar.radio("Navigation", ["Courbe", "Pricer", "P&L"])
