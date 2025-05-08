@@ -945,9 +945,8 @@ from PIL import Image
 import os
 
 # Chemin vers votre logo
-logo_path = "C:/Users/lenovo/Desktop/PFE/credit-du-maroc-seeklogo.png"
-
-# Vérification que le fichier existe
+logo_path = "credit-du-maroc-seeklogo.png"
+# Vérification que le fichier existeg
 if os.path.exists(logo_path):
     logo = Image.open(logo_path)
     
